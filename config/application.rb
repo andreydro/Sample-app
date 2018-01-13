@@ -3,6 +3,8 @@ require_relative 'boot'
 
 require 'rails/all'
 
+config.assets.initialize_on_precompile = false
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
@@ -19,6 +21,6 @@ module SampleApp
     # Include the authenticity token in remote forms.
     config.action_view.embed_authenticity_token_in_remote_forms = true
 
-    config.assets.initialize_on_precompile = false
+
   end
 end
